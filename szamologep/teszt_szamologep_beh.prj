@@ -1,0 +1,5 @@
+verilog work "oszto.v"
+verilog work "hetszegmens.v"
+verilog work "szamologep.v"
+verilog work "teszt_szamologep.v"
+verilog work "F:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

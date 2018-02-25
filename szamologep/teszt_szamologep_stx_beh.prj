@@ -1,0 +1,5 @@
+verilog isim_temp "oszto.v"
+verilog isim_temp "hetszegmens.v"
+verilog isim_temp "szamologep.v"
+verilog isim_temp "teszt_szamologep.v"
+verilog isim_temp "F:/xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

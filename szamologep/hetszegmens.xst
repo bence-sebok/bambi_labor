@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Student/BAMBI1/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Student/BAMBI1/xst"
+elaborate
+-ifn hetszegmens.prj
+-ifmt mixed

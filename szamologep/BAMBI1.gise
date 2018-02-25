@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="BAMBI1.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="calc_test_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="calc_test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="calc_test_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="calc_test_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="hetszegmens.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="hetszegmens.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="hetszegmens.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="hetszegmens_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="hetszegmens_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mux.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="mux.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="oszto.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="oszto.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="oszto.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="szamologep.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="szamologep.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="szamologep.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="szamologep.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="szamologep.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="szamologep.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="szamologep.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="szamologep.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="szamologep.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="szamologep.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="szamologep.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="szamologep.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="szamologep.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="szamologep.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="szamologep.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="szamologep.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="szamologep.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="szamologep.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="szamologep.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="szamologep.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="szamologep.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="szamologep.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="szamologep.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="szamologep_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="szamologep_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="szamologep_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="szamologep_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="szamologep_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="szamologep_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="szamologep_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="szamologep_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="szamologep_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="szamologep_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="szamologep_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="szamologep_par.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="szamologep_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="szamologep_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="szamologep_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="szamologep_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="szamologep_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="teszt_hetszegmens_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="teszt_hetszegmens_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="teszt_oszto_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="teszt_oszto_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="teszt_szamologep_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="teszt_szamologep_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="teszt_szamologep_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1519249516" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1519249516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519249516" xil_pn:in_ck="-3153228739253044803" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1519249516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="hetszegmens.v"/>
+      <outfile xil_pn:name="oszto.v"/>
+      <outfile xil_pn:name="szamologep.v"/>
+      <outfile xil_pn:name="teszt_hetszegmens.v"/>
+      <outfile xil_pn:name="teszt_oszto.v"/>
+      <outfile xil_pn:name="teszt_szamologep.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1519249516" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8287984165398277361" xil_pn:start_ts="1519249516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519249516" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3581661603110295411" xil_pn:start_ts="1519249516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519249516" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3675911700634501538" xil_pn:start_ts="1519249516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519249516" xil_pn:in_ck="-3153228739253044803" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1519249516">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="hetszegmens.v"/>
+      <outfile xil_pn:name="oszto.v"/>
+      <outfile xil_pn:name="szamologep.v"/>
+      <outfile xil_pn:name="teszt_hetszegmens.v"/>
+      <outfile xil_pn:name="teszt_oszto.v"/>
+      <outfile xil_pn:name="teszt_szamologep.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1519258493" xil_pn:in_ck="-3153228739253044803" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7911352614929725501" xil_pn:start_ts="1519258491">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519207543" xil_pn:in_ck="9045483454302369682" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5961657735679675654" xil_pn:start_ts="1519207543">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="teszt_szamologep_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5430965045222351174" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3675911700634501538" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2365890774799331064" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="5199527252417716204" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248141" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8886952858571242008" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248149" xil_pn:in_ck="7239693582045005241" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7334526652374332815" xil_pn:start_ts="1519248141">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="szamologep.lso"/>
+      <outfile xil_pn:name="szamologep.ngc"/>
+      <outfile xil_pn:name="szamologep.ngr"/>
+      <outfile xil_pn:name="szamologep.prj"/>
+      <outfile xil_pn:name="szamologep.stx"/>
+      <outfile xil_pn:name="szamologep.syr"/>
+      <outfile xil_pn:name="szamologep.xst"/>
+      <outfile xil_pn:name="szamologep_stx_beh.prj"/>
+      <outfile xil_pn:name="szamologep_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248149" xil_pn:in_ck="167073549623445" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8767958694554069923" xil_pn:start_ts="1519248149">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248154" xil_pn:in_ck="-4479521655746229860" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4034267446215305823" xil_pn:start_ts="1519248149">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="szamologep.bld"/>
+      <outfile xil_pn:name="szamologep.ngd"/>
+      <outfile xil_pn:name="szamologep_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248159" xil_pn:in_ck="-4479475244261827907" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="4434801857544382025" xil_pn:start_ts="1519248154">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="szamologep.pcf"/>
+      <outfile xil_pn:name="szamologep_map.map"/>
+      <outfile xil_pn:name="szamologep_map.mrp"/>
+      <outfile xil_pn:name="szamologep_map.ncd"/>
+      <outfile xil_pn:name="szamologep_map.ngm"/>
+      <outfile xil_pn:name="szamologep_map.xrpt"/>
+      <outfile xil_pn:name="szamologep_summary.xml"/>
+      <outfile xil_pn:name="szamologep_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248176" xil_pn:in_ck="-4983212119738234378" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3129755442398015208" xil_pn:start_ts="1519248159">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="szamologep.ncd"/>
+      <outfile xil_pn:name="szamologep.pad"/>
+      <outfile xil_pn:name="szamologep.par"/>
+      <outfile xil_pn:name="szamologep.ptwx"/>
+      <outfile xil_pn:name="szamologep.unroutes"/>
+      <outfile xil_pn:name="szamologep.xpi"/>
+      <outfile xil_pn:name="szamologep_pad.csv"/>
+      <outfile xil_pn:name="szamologep_pad.txt"/>
+      <outfile xil_pn:name="szamologep_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248186" xil_pn:in_ck="8050662853541178532" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1519248176">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="szamologep.bgn"/>
+      <outfile xil_pn:name="szamologep.bit"/>
+      <outfile xil_pn:name="szamologep.drc"/>
+      <outfile xil_pn:name="szamologep.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1519209502" xil_pn:in_ck="8050662853541165678" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="2782597451163768705" xil_pn:start_ts="1519209501">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1519248176" xil_pn:in_ck="-4485601560202885703" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1519248172">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="szamologep.twr"/>
+      <outfile xil_pn:name="szamologep.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

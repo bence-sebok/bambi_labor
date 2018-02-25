@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Student/BAMBI1/teszt_szamologep_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="teszt_szamologep" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/teszt_szamologep/leds" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/kimenet" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">kimenet[7:0]</obj_property>
+      <obj_property name="ObjectShortName">kimenet[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/AN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">AN[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AN[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/SEG" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEG[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SEG[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/dip_sw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dip_sw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dip_sw[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/oszto_aramkor/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/oszto_aramkor/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/btn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">btn[3:0]</obj_property>
+      <obj_property name="ObjectShortName">btn[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_1/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_1/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_1/hanyados" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hanyados[7:0]</obj_property>
+      <obj_property name="ObjectShortName">hanyados[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_1/maradek" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">maradek[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maradek[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/osztas_eredmeny" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">osztas_eredmeny[7:0]</obj_property>
+      <obj_property name="ObjectShortName">osztas_eredmeny[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_2/hanyados" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hanyados[7:0]</obj_property>
+      <obj_property name="ObjectShortName">hanyados[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_2/maradek" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">maradek[7:0]</obj_property>
+      <obj_property name="ObjectShortName">maradek[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_2/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_2/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_1/cntr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cntr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cntr[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/bcd_osztas_1/a_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a_reg[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/kijelzo/din0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">din0[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/kijelzo/din1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">din1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/teszt_szamologep/uut/kijelzo/din2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">din2[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
