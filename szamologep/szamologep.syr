@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: szamologep.prj
 
@@ -120,6 +120,7 @@ Analysis of file <"szamologep.prj"> succeeded.
 Analyzing hierarchy for module <szamologep> in library <work> with parameters.
 	ADD = "0001"
 	DIV = "1000"
+	ERROR = "00000000"
 	MUL = "0100"
 	SUB = "0010"
 
@@ -146,6 +147,7 @@ Analyzing hierarchy for module <hetszegmens> in library <work>.
 Analyzing top module <szamologep>.
 	ADD = 4'b0001
 	DIV = 4'b1000
+	ERROR = 8'b00000000
 	MUL = 4'b0100
 	SUB = 4'b0010
 Module <szamologep> is correct for synthesis.
@@ -175,6 +177,7 @@ Module <hetszegmens> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <reg_1000> in unit <szamologep> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <oszto_1>.
     Related source file is "oszto.v".
@@ -208,40 +211,45 @@ Unit <oszto_2> synthesized.
 
 Synthesizing Unit <hetszegmens>.
     Related source file is "hetszegmens.v".
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <cntr> of Case statement line 48 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <cntr> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-    Using one-hot encoding for signal <cntr>.
     Found 16x8-bit ROM for signal <SEG_DEC>.
-    Found 3-bit register for signal <cntr>.
+    Found 2-bit up counter for signal <cntr>.
+    Found 4-bit 4-to-1 multiplexer for signal <dmux>.
+    Found 4-bit register for signal <reg_din0>.
+    Found 4-bit register for signal <reg_din1>.
+    Found 4-bit register for signal <reg_din2>.
+    Found 4-bit register for signal <reg_din3>.
     Found 4-bit register for signal <shift_register>.
     Found 14-bit up counter for signal <szamlalo>.
     Summary:
 	inferred   1 ROM(s).
-	inferred   1 Counter(s).
-	inferred   7 D-type flip-flop(s).
+	inferred   2 Counter(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
 Unit <hetszegmens> synthesized.
 
 
 Synthesizing Unit <szamologep>.
     Related source file is "szamologep.v".
-WARNING:Xst:646 - Signal <tizesek<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <szazasok<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reg_1000<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reg_100<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reg_10<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reg_1<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <nullaval2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <nullaval> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <egyesek<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <atalakitas_kesz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 4-bit register for signal <a>.
-    Found 4-bit register for signal <b>.
-    Found 4-bit adder carry out for signal <kimenet$addsub0000> created at line 44.
-    Found 4x4-bit multiplier for signal <kimenet$mult0000> created at line 46.
-    Found 6-bit subtractor for signal <kimenet$sub0000> created at line 45.
+WARNING:Xst:646 - Signal <maradek> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit adder carry out for signal <kimenet$addsub0000> created at line 49.
+    Found 4x4-bit multiplier for signal <kimenet$mult0000> created at line 51.
+    Found 6-bit subtractor for signal <kimenet$sub0000> created at line 50.
     Found 4-bit register for signal <muvelet>.
+    Found 4-bit register for signal <opA>.
+    Found 4-bit register for signal <opB>.
     Found 8-bit register for signal <osztas_eredmeny>.
-    Found 1-bit register for signal <reset>.
+    Found 8-bit register for signal <reg_1>.
+    Found 8-bit register for signal <reg_10>.
+    Found 8-bit register for signal <reg_100>.
+    Found 1-bit register for signal <rst>.
     Summary:
-	inferred  21 D-type flip-flop(s).
+	inferred  45 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   1 Multiplier(s).
 Unit <szamologep> synthesized.
@@ -260,18 +268,21 @@ Macro Statistics
  4-bit subtractor                                      : 1
  6-bit subtractor                                      : 1
  8-bit subtractor                                      : 2
-# Counters                                             : 3
+# Counters                                             : 5
+ 14-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
  4-bit up counter                                      : 1
  8-bit up counter                                      : 2
-# Registers                                            : 13
+# Registers                                            : 19
  1-bit register                                        : 1
  2-bit register                                        : 3
- 3-bit register                                        : 1
- 4-bit register                                        : 5
- 8-bit register                                        : 3
+ 4-bit register                                        : 9
+ 8-bit register                                        : 6
 # Comparators                                          : 3
  4-bit comparator less                                 : 1
  8-bit comparator less                                 : 2
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -279,11 +290,27 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <shift_register_0> in Unit <kijelzo> is equivalent to the following 2 FFs/Latches, which will be removed : <cntr_1> <cntr_2> 
-INFO:Xst:2261 - The FF/Latch <shift_register_1> in Unit <kijelzo> is equivalent to the following 3 FFs/Latches, which will be removed : <shift_register_2> <shift_register_3> <cntr_0> 
-WARNING:Xst:1293 - FF/Latch <shift_register_0> has a constant value of 0 in block <kijelzo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <shift_register_1> has a constant value of 1 in block <kijelzo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2404 -  FFs/Latches <cntr<2:1>> (without init value) have a constant value of 0 in block <hetszegmens>.
+WARNING:Xst:1710 - FF/Latch <reg_din3_0> (without init value) has a constant value of 0 in block <kijelzo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_din3_1> (without init value) has a constant value of 0 in block <kijelzo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_din3_2> (without init value) has a constant value of 0 in block <kijelzo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_din3_3> (without init value) has a constant value of 0 in block <kijelzo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <osztas_eredmeny_4> (without init value) has a constant value of 0 in block <szamologep>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <osztas_eredmeny_5> (without init value) has a constant value of 0 in block <szamologep>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <osztas_eredmeny_6> (without init value) has a constant value of 0 in block <szamologep>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <osztas_eredmeny_7> (without init value) has a constant value of 0 in block <szamologep>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <reg_1_4> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_1_5> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_1_6> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_1_7> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_4> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_5> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_6> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_7> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_4> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_5> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_6> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_7> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2404 -  FFs/Latches <osztas_eredmeny<7:4>> (without init value) have a constant value of 0 in block <szamologep>.
 
 Synthesizing (advanced) Unit <oszto_1>.
 The following registers are absorbed into accumulator <a_reg>: 1 register on signal <a_reg>.
@@ -295,13 +322,25 @@ Unit <oszto_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <szamologep>.
 	Found pipelined multiplier on signal <kimenet_mult0000>:
-		- 1 pipeline level(s) found in a register on signal <a>.
+		- 1 pipeline level(s) found in a register on signal <opA>.
 		Pushing register(s) into the multiplier macro.
 
-		- 1 pipeline level(s) found in a register on signal <b>.
+		- 1 pipeline level(s) found in a register on signal <opB>.
 		Pushing register(s) into the multiplier macro.
 INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_kimenet_mult0000 by adding 1 register level(s).
 Unit <szamologep> synthesized (advanced).
+WARNING:Xst:2677 - Node <reg_1_4> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_1_5> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_1_6> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_1_7> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_4> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_5> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_6> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_10_7> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_4> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_5> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_6> of sequential type is unconnected in block <szamologep>.
+WARNING:Xst:2677 - Node <reg_100_7> of sequential type is unconnected in block <szamologep>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -314,54 +353,49 @@ Macro Statistics
 # Adders/Subtractors                                   : 2
  4-bit adder carry out                                 : 1
  6-bit subtractor                                      : 1
-# Counters                                             : 3
+# Counters                                             : 5
+ 14-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
  4-bit up counter                                      : 1
  8-bit up counter                                      : 2
 # Accumulators                                         : 3
  4-bit down loadable accumulator                       : 1
  8-bit down loadable accumulator                       : 2
-# Registers                                            : 32
- Flip-Flops                                            : 32
+# Registers                                            : 55
+ Flip-Flops                                            : 55
 # Comparators                                          : 3
  4-bit comparator less                                 : 1
  8-bit comparator less                                 : 2
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <cntr> (without init value) has a constant value of 1 in block <hetszegmens>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shift_register_0> has a constant value of 0 in block <hetszegmens>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shift_register_1> has a constant value of 1 in block <hetszegmens>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shift_register_2> has a constant value of 1 in block <hetszegmens>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shift_register_3> has a constant value of 1 in block <hetszegmens>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <reg_din3_0> in Unit <hetszegmens> is equivalent to the following 3 FFs/Latches, which will be removed : <reg_din3_1> <reg_din3_2> <reg_din3_3> 
+WARNING:Xst:1710 - FF/Latch <reg_din3_0> (without init value) has a constant value of 0 in block <hetszegmens>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <szamologep> ...
 
 Optimizing unit <oszto_1> ...
 
 Optimizing unit <oszto_2> ...
+
+Optimizing unit <hetszegmens> ...
 WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_7> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_6> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_5> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_4> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_3> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_2> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_1> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_2/cntr_0> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_7> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_6> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_5> of sequential type is unconnected in block <szamologep>.
 WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_4> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_3> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_2> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_1> of sequential type is unconnected in block <szamologep>.
-WARNING:Xst:2677 - Node <bcd_osztas_1/cntr_0> of sequential type is unconnected in block <szamologep>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block szamologep, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block szamologep, actual ratio is 4.
 
 Final Macro Processing ...
 
@@ -369,8 +403,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 51
- Flip-Flops                                            : 51
+# Registers                                            : 99
+ Flip-Flops                                            : 99
 
 =========================================================================
 
@@ -399,27 +433,28 @@ Design Statistics
 # IOs                              : 34
 
 Cell Usage :
-# BELS                             : 200
+# BELS                             : 266
 #      GND                         : 1
-#      INV                         : 15
-#      LUT1                        : 5
-#      LUT2                        : 27
-#      LUT3                        : 25
-#      LUT3_D                      : 2
-#      LUT3_L                      : 3
-#      LUT4                        : 61
-#      LUT4_D                      : 11
+#      INV                         : 19
+#      LUT1                        : 24
+#      LUT2                        : 25
+#      LUT2_L                      : 2
+#      LUT3                        : 24
+#      LUT3_L                      : 1
+#      LUT4                        : 66
+#      LUT4_D                      : 10
 #      LUT4_L                      : 2
-#      MUXCY                       : 30
-#      MUXF5                       : 1
+#      MUXCY                       : 49
+#      MUXF5                       : 4
 #      VCC                         : 1
-#      XORCY                       : 16
-# FlipFlops/Latches                : 51
+#      XORCY                       : 38
+# FlipFlops/Latches                : 99
 #      FD                          : 13
-#      FDE                         : 28
-#      FDR                         : 5
-#      FDRE                        : 4
+#      FDE                         : 36
+#      FDR                         : 19
+#      FDRE                        : 27
 #      FDRS                        : 1
+#      FDSE                        : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 33
@@ -434,9 +469,9 @@ Device utilization summary:
 
 Selected Device : 3s250etq144-4 
 
- Number of Slices:                       79  out of   2448     3%  
- Number of Slice Flip Flops:             51  out of   4896     1%  
- Number of 4 input LUTs:                151  out of   4896     3%  
+ Number of Slices:                       90  out of   2448     3%  
+ Number of Slice Flip Flops:             99  out of   4896     2%  
+ Number of 4 input LUTs:                173  out of   4896     3%  
  Number of IOs:                          34
  Number of bonded IOBs:                  34  out of    108    31%  
  Number of MULT18X18SIOs:                 1  out of     12     8%  
@@ -463,7 +498,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 52    |
+clk                                | BUFGP                  | 100   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -474,9 +509,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 8.641ns (Maximum Frequency: 115.727MHz)
+   Minimum period: 8.413ns (Maximum Frequency: 118.864MHz)
    Minimum input arrival time before clock: 2.049ns
-   Maximum output required time after clock: 10.439ns
+   Maximum output required time after clock: 9.454ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -485,36 +520,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.641ns (frequency: 115.727MHz)
-  Total number of paths / destination ports: 2004 / 81
+  Clock period: 8.413ns (frequency: 118.864MHz)
+  Total number of paths / destination ports: 2332 / 203
 -------------------------------------------------------------------------
-Delay:               8.641ns (Levels of Logic = 12)
-  Source:            muvelet_3 (FF)
+Delay:               8.413ns (Levels of Logic = 9)
+  Source:            opB_0 (FF)
   Destination:       bcd_osztas_1/a_reg_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: muvelet_3 to bcd_osztas_1/a_reg_7
+  Data Path: opB_0 to bcd_osztas_1/a_reg_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               9   0.591   0.995  muvelet_3 (muvelet_3)
-     LUT4:I0->O            5   0.704   0.712  kimenet_or00001 (kimenet_or0000)
-     LUT3:I1->O            1   0.704   0.424  kimenet<1>2 (kimenet<1>2)
-     LUT4_D:I3->LO         1   0.704   0.104  kimenet<1>20 (N42)
-     LUT4:I3->O            1   0.704   0.424  kimenet<1>63_SW0 (N14)
-     LUT4:I3->O            1   0.704   0.000  bcd_osztas_1/Maccum_a_reg_lut<1> (bcd_osztas_1/Maccum_a_reg_lut<1>)
-     MUXCY:S->O            1   0.464   0.000  bcd_osztas_1/Maccum_a_reg_cy<1> (bcd_osztas_1/Maccum_a_reg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  bcd_osztas_1/Maccum_a_reg_cy<2> (bcd_osztas_1/Maccum_a_reg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  bcd_osztas_1/Maccum_a_reg_cy<3> (bcd_osztas_1/Maccum_a_reg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  bcd_osztas_1/Maccum_a_reg_cy<4> (bcd_osztas_1/Maccum_a_reg_cy<4>)
+     FD:C->Q              10   0.591   0.886  opB_0 (opB_0)
+     LUT4_D:I3->O          2   0.704   0.482  Msub_kimenet_sub0000_cy<1>11 (Msub_kimenet_sub0000_cy<1>)
+     LUT3_L:I2->LO         1   0.704   0.104  Msub_kimenet_sub0000_cy<2>11 (Msub_kimenet_sub0000_cy<2>)
+     LUT4:I3->O            7   0.704   0.712  kimenet<4>11 (N01)
+     LUT4:I3->O            1   0.704   0.424  kimenet<4>_SW1 (N18)
+     LUT4:I3->O            1   0.704   0.000  bcd_osztas_1/Maccum_a_reg_lut<4> (bcd_osztas_1/Maccum_a_reg_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  bcd_osztas_1/Maccum_a_reg_cy<4> (bcd_osztas_1/Maccum_a_reg_cy<4>)
      MUXCY:CI->O           1   0.059   0.000  bcd_osztas_1/Maccum_a_reg_cy<5> (bcd_osztas_1/Maccum_a_reg_cy<5>)
      MUXCY:CI->O           0   0.059   0.000  bcd_osztas_1/Maccum_a_reg_cy<6> (bcd_osztas_1/Maccum_a_reg_cy<6>)
      XORCY:CI->O           1   0.804   0.000  bcd_osztas_1/Maccum_a_reg_xor<7> (bcd_osztas_1/Result<7>)
      FDE:D                     0.308          bcd_osztas_1/a_reg_7
     ----------------------------------------
-    Total                      8.641ns (5.982ns logic, 2.659ns route)
-                                       (69.2% logic, 30.8% route)
+    Total                      8.413ns (5.805ns logic, 2.608ns route)
+                                       (69.0% logic, 31.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -537,36 +569,38 @@ Offset:              2.049ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 280 / 15
+  Total number of paths / destination ports: 446 / 19
 -------------------------------------------------------------------------
-Offset:              10.439ns (Levels of Logic = 3)
-  Source:            Mmult_kimenet_mult0000 (MULT)
-  Destination:       leds<7> (PAD)
+Offset:              9.454ns (Levels of Logic = 5)
+  Source:            opB_0 (FF)
+  Destination:       leds<6> (PAD)
   Source Clock:      clk rising
 
-  Data Path: Mmult_kimenet_mult0000 to leds<7>
+  Data Path: opB_0 to leds<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     MULT18X18SIO:CLK->P7    1   4.433   0.424  Mmult_kimenet_mult0000 (kimenet_mult0000<7>)
-     LUT4:I3->O            2   0.704   0.482  kimenet<7>_SW0 (N2)
-     LUT4:I2->O            1   0.704   0.420  kimenet<7> (leds_7_OBUF)
-     OBUF:I->O                 3.272          leds_7_OBUF (leds<7>)
+     FD:C->Q              10   0.591   0.886  opB_0 (opB_0)
+     LUT4_D:I3->O          2   0.704   0.482  Msub_kimenet_sub0000_cy<1>11 (Msub_kimenet_sub0000_cy<1>)
+     LUT3_L:I2->LO         1   0.704   0.104  Msub_kimenet_sub0000_cy<2>11 (Msub_kimenet_sub0000_cy<2>)
+     LUT4:I3->O            7   0.704   0.883  kimenet<4>11 (N01)
+     LUT3:I0->O            1   0.704   0.420  kimenet<5>1 (leds_5_OBUF)
+     OBUF:I->O                 3.272          leds_5_OBUF (leds<5>)
     ----------------------------------------
-    Total                     10.439ns (9.113ns logic, 1.326ns route)
-                                       (87.3% logic, 12.7% route)
+    Total                      9.454ns (6.679ns logic, 2.775ns route)
+                                       (70.6% logic, 29.4% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.19 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.21 secs
  
 --> 
 
-Total memory usage is 295088 kilobytes
+Total memory usage is 154060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   30 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   49 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

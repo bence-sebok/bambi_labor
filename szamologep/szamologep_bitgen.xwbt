@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=F:\BAMBI1\szamologep.ncd
-OUTFILE=F:\BAMBI1\szamologep.bit
+INFILE=C:\Documents and Settings\xilinxuser\Desktop\BAMBI1\szamologep.ncd
+OUTFILE=C:\Documents and Settings\xilinxuser\Desktop\BAMBI1\szamologep.bit
 FAMILY=Spartan3E
 PART=xc3s250e-4tq144
-WORKINGDIR=F:\BAMBI1
+WORKINGDIR=C:\Documents and Settings\xilinxuser\Desktop\BAMBI1
 LICENSE=WebPack
-USER_INFO=174212716_1777490381_0_560
+USER_INFO=174212716_1777490381_0_735

@@ -3,6 +3,7 @@ NET "btn[0]" LOC = P38;
 NET "btn[1]" LOC = P36;
 NET "btn[2]" LOC = P24;
 NET "btn[3]" LOC = P12;
+NET "reset" LOC = P41;
 NET "dip_sw[0]" LOC = P101;
 NET "dip_sw[1]" LOC = P95;
 NET "dip_sw[2]" LOC = P89;

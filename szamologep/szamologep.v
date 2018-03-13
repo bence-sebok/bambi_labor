@@ -3,7 +3,7 @@
 // Top-level module
 module szamologep(
 	input clk,
-	input rst,
+	input reset,
 	input [7:0] dip_sw,
 	input [3:0] btn,
 	output [7:0] leds,
@@ -11,68 +11,107 @@ module szamologep(
    output [7:0] SEG // adott digit szegmensei
 );
 
-// Synchronize inputs
-reg reset;
-reg [3:0] a;
-reg [3:0] b;
+// Segédváltozók
+reg rst; // reset gomb
+reg [3:0] opA; // egyik operandus
+reg [3:0] opB; // másik operandus
 reg [3:0] muvelet;
 reg [7:0] kimenet;
-// reg osztas = 0; // ???????????????????????????????
 wire osztas_kesz;
 wire div0;
 wire [3:0] hanyados;
 wire [3:0] maradek;
-always @(posedge clk)
-begin
-	reset <= rst;
-	a <= dip_sw[7:4];
-	b <= dip_sw[3:0];
-	muvelet <= btn;
-end
 
 // Mûveletek
 localparam ADD = 4'b0001;
 localparam SUB = 4'b0010;
 localparam MUL = 4'b0100;
-// localparam XOR = 4'b1000;
 localparam DIV = 4'b1000;
+localparam ERROR = 8'b0000_0000;
+// Elso verzióban: osztás helyett bitenkénti XOR
+// localparam XOR = 4'b1000;
+
+// Synchronize inputs
+always @(posedge clk)
+begin
+	rst <= reset;
+	opA <= dip_sw[7:4];
+	opB <= dip_sw[3:0];
+	muvelet <= btn;
+end
+
+// Kombinációs logika:
+// * mert ha bármilyen bemenet változik, akkor változhat a kimenet.
+// Bemeneti változás lehet az operandusok vagy a muvelet változása.
 reg [7:0] osztas_eredmeny;
-// Kombinációs logika
-// - *, mert ha bármilyen bemenet változik, akkor változhat a kimenet
 always @ (*)
 	case (muvelet)
-	ADD: kimenet <= a + b;
-	SUB: kimenet <= a - b;
-	MUL: kimenet <= a * b;
-	// XOR: kimenet <= a ^ b;
-	DIV: kimenet <= osztas_eredmeny;
-	default: kimenet <= 8'b1111_1111;
+		ADD: kimenet <= opA + opB;
+		SUB: kimenet <= opA - opB;
+		MUL: kimenet <= opA * opB;
+		// XOR: kimenet <= a ^ b;
+		DIV: kimenet <= osztas_eredmeny;
+		default: kimenet <= 8'b0000_0000;
 	endcase
+	
+wire osztas_kezdjed;
+assign osztas_kezdjed = (muvelet == DIV);
 
 always @ (posedge clk)
 	if(osztas_kesz)
 		if(div0)
-			 osztas_eredmeny<= 8'b1111_1111;
+			 osztas_eredmeny <= 8'b0000_0000;
 		else
-			osztas_eredmeny <= {hanyados,maradek};
+			 osztas_eredmeny <= {4'b0000,hanyados};
+			// osztas_eredmeny <= {hanyados,maradek};
 
 assign leds = kimenet;
-wire osztas_kezdjed;
-assign osztas_kezdjed=(muvelet==DIV);
+
+/*
+wire johet_maradek;
+wire div0_hanyados;
+wire div0_maradek;
+wire div_bcd;
+
+oszto bcd_osztas_3(
+	.start(osztas_kesz),
+	.clk(clk),
+	.rst(rst),
+	.a(hanyados),
+	.b(4'b1010), // 10
+	.hanyados(hanyados_10),
+	.maradek(hanyados_1),
+	.ready(johet_maradek),
+	.hiba(div0_hanyados)
+);
+
+oszto bcd_osztas_4(
+	.start(johet_maradek),
+	.clk(clk),
+	.rst(rst),
+	.a(maradek),
+	.b(4'b1010), // 10
+	.hanyados(maradek_10),
+	.maradek(maradek_1),
+	.ready(div_bcd),
+	.hiba(div0_maradek)
+);
+*/
+
 // osztó modul
 oszto oszto_aramkor(
 	.start(osztas_kezdjed),
 	.clk(clk),
-	.rst(reset),
-	.a(a),
-	.b(b),
+	.rst(rst),
+	.a(opA),
+	.b(opB),
 	.hanyados(hanyados),
 	.maradek(maradek),
 	.ready(osztas_kesz),
 	.hiba(div0)
 );
 
-// bináris átalakítása BCD számmá, avagy bin2bcd
+// bin2bcd: bináris átalakítása BCD számmá
 wire johet_a_masodik;
 wire nullaval;
 wire nullaval2;
@@ -84,7 +123,7 @@ wire atalakitas_kesz;
 oszto #(.BITS(8)) bcd_osztas_1(
 	.start(1'b1),
 	.clk(clk),
-	.rst(reset),
+	.rst(rst),
 	.a(kimenet),
 	.b(8'b0110_0100), // 100
 	.hanyados(szazasok),
@@ -96,7 +135,7 @@ oszto #(.BITS(8)) bcd_osztas_1(
 oszto #(.BITS(8)) bcd_osztas_2(
 	.start(johet_a_masodik),
 	.clk(clk),
-	.rst(reset),
+	.rst(rst),
 	.a(reszeredmeny),
 	.b(8'b0000_1010), // 10
 	.hanyados(tizesek),
@@ -105,13 +144,40 @@ oszto #(.BITS(8)) bcd_osztas_2(
 	.hiba(nullaval2)
 );
 
+reg [7:0] reg_1;
+reg [7:0] reg_10;
+reg [7:0] reg_100;
+reg [7:0] reg_1000;
+
+always @ (posedge clk)
+begin
+/*
+if(div_bcd)
+	begin
+		reg_1 <= maradek_1;
+		reg_10 <= maradek_10;
+		reg_100 <= hanyados_1;
+		reg_1000 <= hanyados_10;
+	end
+else
+*/
+if(atalakitas_kesz)
+	begin
+		reg_1 <= egyesek;
+		reg_10 <= tizesek;
+		reg_100 <= szazasok;
+		reg_1000 <= 0;
+	end
+end
+
 // hétszegmens vezérlése
 hetszegmens kijelzo(
 	.clk(clk),
-	.rst(reset),
-	.din0(egyesek[3:0]),
-	.din1(tizesek[3:0]),
-	.din2(szazasok[3:0]),
+	.rst(rst),
+	.din0(reg_1[3:0]),
+	.din1(reg_10[3:0]),
+	.din2(reg_100[3:0]),
+	.din3(reg_1000[3:0]),
    .AN(AN),
 	.SEG(SEG)
 );

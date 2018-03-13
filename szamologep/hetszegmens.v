@@ -5,21 +5,46 @@ module hetszegmens
    input [3:0] din0,
    input [3:0] din1,
 	input [3:0] din2,
+	input [3:0] din3,
    output [3:0] AN,
    output [7:0] SEG
 );
 
+wire en;
+reg [3:0] reg_din0;
+reg [3:0] reg_din1;
+reg [3:0] reg_din2;
+reg [3:0] reg_din3;
+
+// 3 digit mintavételezése órajelenként:
+always @ (posedge clk)
+begin
+	if(rst)
+		begin
+			reg_din0 <= 0;
+			reg_din1 <= 0;
+			reg_din2 <= 0;
+			reg_din3 <= 0;
+		end
+	else if(en)
+		begin
+			reg_din0 <= din0;
+			reg_din1 <= din1;
+			reg_din2 <= din2;
+			reg_din3 <= din3;
+		end
+end
+
 // rategen
 // 16 MHz ---> 1 kHz: 0...15_999 ---> log2(15999) felso egészrésze: 14 bites regiszter
-wire en;
 reg [13:0] szamlalo;
 always @ (posedge clk)
-	if(rst)
+	if(rst | en)
 		szamlalo <= 0;
 	else
 		szamlalo <= szamlalo + 1;
 		
-assign en = (szamlalo == 18_999);
+assign en = (szamlalo == 5_999);
 
 // 4 bites shift register
 // Ha engedélyezve van, akkor balra shiftel.
@@ -33,9 +58,8 @@ always @ (posedge clk)
 		
 assign AN = shift_register;
 
-
-// 3 bit counter
-reg [2:0] cntr;
+// 2 bit counter
+reg [1:0] cntr;
 always @ (posedge clk)
 	if(rst)
 		cntr <= 0;
@@ -46,14 +70,15 @@ reg [3:0] dmux;
 
 always @ (*)
 	case (cntr)
-	3'b000: dmux <= din0;
-	3'b001: dmux <= din1;
-	3'b010: dmux <= din2;
-	default: dmux <= 0;
+	2'b00: dmux <= reg_din0;
+	2'b01: dmux <= reg_din1;
+	2'b10: dmux <= reg_din2;
+	2'b11: dmux <= reg_din3;
 	endcase
 
 //segment decoder
 reg [7:0] SEG_DEC;
+
 always @(dmux)
 	case (dmux)
 		4'h0:    SEG_DEC <= 8'b00000011;
@@ -67,7 +92,7 @@ always @(dmux)
 		4'h8:    SEG_DEC <= 8'b00000001;
 		4'h9:    SEG_DEC <= 8'b00001001;
 		default: SEG_DEC <= 8'b11111111;
-	endcase
+endcase
 
 assign SEG = SEG_DEC;
 
