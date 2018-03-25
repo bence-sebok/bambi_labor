@@ -1,4 +1,4 @@
-# bambi_labor
+﻿# bambi_labor
 
 ## Bevezetés
 A repository a [Budapesti Műszaki és Gazdaságtudományi Egyetem](http://www.bme.hu) [Villamosmérnöki és Informatikai Karán](https://www.vik.bme.hu) a [Méréstechnika és Információs Rendszerek Tanszék](https://www.mit.bme.hu) [Beágyazott és ambiens rendszerek laboratórium](https://www.mit.bme.hu/oktatas/targyak/vimiac09) tantárgyához készült
@@ -26,3 +26,12 @@ Gombnyomásra végeredmény számítása és kijelzése.
   * Végeredmény (opA * opB) kijelzése: 84
     * LED-eken: 8'b0101_0100 (MSB: LD7, LSB: LD0)
     * Hétszegmens kijelzőn: 0084
+### 2. verzió
+Számológép működése:
+1. Kapcsolókon egyik operandus beállítása (operandusA)
+2. BTN3 gombnyomásra eltároljuk operandusA-t
+3. Kapcsolókon művelet beállítása (operation)
+4. BTN2 gombnyomásra eltároljuk a műveletet
+5. Kapcsolókon másik operandus beállítása (operandusB)
+6. BTN1 gombnyomásra eltároljuk operandusB-t
+7. BTN0 gombnyomásra a végeredmény kijelzése a hétszegmens kijelzőn és a LED-eken
