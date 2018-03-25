@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
 3 -fastpaths -xml szamologep.twx szamologep.ncd -o szamologep.twr
-szamologep.pcf -ucf szgep.ucf
+szamologep.pcf -ucf fizikai_io.ucf
 
 Design file:              szamologep.ncd
 Physical constraint file: szamologep.pcf
@@ -45,19 +45,19 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-btn<0>      |    1.638(R)|   -0.119(R)|clk_BUFGP         |   0.000|
-btn<1>      |    1.735(R)|   -0.197(R)|clk_BUFGP         |   0.000|
-btn<2>      |    0.854(R)|    0.508(R)|clk_BUFGP         |   0.000|
-btn<3>      |    1.269(R)|    0.176(R)|clk_BUFGP         |   0.000|
-dip_sw<0>   |    1.820(R)|   -0.073(R)|clk_BUFGP         |   0.000|
-dip_sw<1>   |    1.412(R)|    0.274(R)|clk_BUFGP         |   0.000|
-dip_sw<2>   |    1.035(R)|    0.790(R)|clk_BUFGP         |   0.000|
-dip_sw<3>   |    0.615(R)|    1.268(R)|clk_BUFGP         |   0.000|
-dip_sw<4>   |    1.143(R)|    0.770(R)|clk_BUFGP         |   0.000|
-dip_sw<5>   |    1.698(R)|    0.027(R)|clk_BUFGP         |   0.000|
-dip_sw<6>   |    1.627(R)|    0.528(R)|clk_BUFGP         |   0.000|
-dip_sw<7>   |    1.715(R)|    0.321(R)|clk_BUFGP         |   0.000|
-reset       |    0.338(R)|    0.924(R)|clk_BUFGP         |   0.000|
+btn<0>      |    0.020(R)|    1.183(R)|clk_BUFGP         |   0.000|
+btn<1>      |   -0.085(R)|    1.267(R)|clk_BUFGP         |   0.000|
+btn<2>      |    0.362(R)|    0.904(R)|clk_BUFGP         |   0.000|
+btn<3>      |    1.240(R)|    0.201(R)|clk_BUFGP         |   0.000|
+dip_sw<0>   |    1.593(R)|    0.416(R)|clk_BUFGP         |   0.000|
+dip_sw<1>   |    1.166(R)|    1.205(R)|clk_BUFGP         |   0.000|
+dip_sw<2>   |    1.544(R)|    0.690(R)|clk_BUFGP         |   0.000|
+dip_sw<3>   |    2.122(R)|    0.623(R)|clk_BUFGP         |   0.000|
+dip_sw<4>   |    2.049(R)|    0.160(R)|clk_BUFGP         |   0.000|
+dip_sw<5>   |    2.259(R)|    0.161(R)|clk_BUFGP         |   0.000|
+dip_sw<6>   |    3.031(R)|   -0.062(R)|clk_BUFGP         |   0.000|
+dip_sw<7>   |    2.175(R)|   -0.352(R)|clk_BUFGP         |   0.000|
+reset       |    1.422(R)|    0.062(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -65,25 +65,25 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-AN<0>       |    7.757(R)|clk_BUFGP         |   0.000|
-AN<1>       |    8.034(R)|clk_BUFGP         |   0.000|
-AN<2>       |    7.672(R)|clk_BUFGP         |   0.000|
-AN<3>       |    8.197(R)|clk_BUFGP         |   0.000|
-SEG<1>      |   12.047(R)|clk_BUFGP         |   0.000|
-SEG<2>      |   12.593(R)|clk_BUFGP         |   0.000|
-SEG<3>      |   11.918(R)|clk_BUFGP         |   0.000|
-SEG<4>      |   11.931(R)|clk_BUFGP         |   0.000|
-SEG<5>      |   11.887(R)|clk_BUFGP         |   0.000|
-SEG<6>      |   12.158(R)|clk_BUFGP         |   0.000|
-SEG<7>      |   12.075(R)|clk_BUFGP         |   0.000|
-leds<0>     |   13.436(R)|clk_BUFGP         |   0.000|
-leds<1>     |   13.113(R)|clk_BUFGP         |   0.000|
-leds<2>     |   12.948(R)|clk_BUFGP         |   0.000|
-leds<3>     |   13.658(R)|clk_BUFGP         |   0.000|
-leds<4>     |   13.813(R)|clk_BUFGP         |   0.000|
-leds<5>     |   13.666(R)|clk_BUFGP         |   0.000|
-leds<6>     |   13.660(R)|clk_BUFGP         |   0.000|
-leds<7>     |   14.171(R)|clk_BUFGP         |   0.000|
+AN<0>       |    7.737(R)|clk_BUFGP         |   0.000|
+AN<1>       |    8.204(R)|clk_BUFGP         |   0.000|
+AN<2>       |    7.671(R)|clk_BUFGP         |   0.000|
+AN<3>       |    8.196(R)|clk_BUFGP         |   0.000|
+SEG<1>      |   12.120(R)|clk_BUFGP         |   0.000|
+SEG<2>      |   12.099(R)|clk_BUFGP         |   0.000|
+SEG<3>      |   12.219(R)|clk_BUFGP         |   0.000|
+SEG<4>      |   11.161(R)|clk_BUFGP         |   0.000|
+SEG<5>      |   11.106(R)|clk_BUFGP         |   0.000|
+SEG<6>      |   10.932(R)|clk_BUFGP         |   0.000|
+SEG<7>      |   11.684(R)|clk_BUFGP         |   0.000|
+leds<0>     |    9.738(R)|clk_BUFGP         |   0.000|
+leds<1>     |   10.017(R)|clk_BUFGP         |   0.000|
+leds<2>     |    9.048(R)|clk_BUFGP         |   0.000|
+leds<3>     |    9.758(R)|clk_BUFGP         |   0.000|
+leds<4>     |    9.568(R)|clk_BUFGP         |   0.000|
+leds<5>     |   10.193(R)|clk_BUFGP         |   0.000|
+leds<6>     |   10.303(R)|clk_BUFGP         |   0.000|
+leds<7>     |   11.311(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -91,18 +91,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.656|         |         |         |
+clk            |    7.199|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Mar 14 00:43:56 2018 
+Analysis completed Sun Mar 25 20:01:46 2018 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 108 MB
+Peak Memory Usage: 109 MB
 
 
 

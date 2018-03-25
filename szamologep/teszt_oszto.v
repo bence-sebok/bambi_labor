@@ -39,8 +39,8 @@ module teszt_oszto;
 		// Wait 100 ns for global reset to finish
 		#100;
 		rst = 0;
-		a = 4'b1100;
-		b = 4'b0101;
+		a = 15;
+		b = 5;;
 		
 		# 10
 		start = 1;		

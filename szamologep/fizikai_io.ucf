@@ -1,0 +1,38 @@
+NET "clk" LOC = P56;
+// **************** Nyomógombok ******************
+NET "btn[0]" LOC = P38;
+NET "btn[1]" LOC = P36;
+NET "btn[2]" LOC = P24;
+NET "btn[3]" LOC = P12;
+NET "reset" LOC = P41;
+// ***************** Kapcsolók *******************
+NET "dip_sw[0]" LOC = P101;
+NET "dip_sw[1]" LOC = P95;
+NET "dip_sw[2]" LOC = P89;
+NET "dip_sw[3]" LOC = P84;
+NET "dip_sw[4]" LOC = P78;
+NET "dip_sw[5]" LOC = P69;
+NET "dip_sw[6]" LOC = P48;
+NET "dip_sw[7]" LOC = P47;
+// ****************** LED-ek *********************
+NET "leds[0]" LOC = P59;
+NET "leds[1]" LOC = P58;
+NET "leds[2]" LOC = P54;
+NET "leds[3]" LOC = P53;
+NET "leds[4]" LOC = P52;
+NET "leds[5]" LOC = P51;
+NET "leds[6]" LOC = P50;
+NET "leds[7]" LOC = P43;
+// ************* Hétszegmens kijelzo *************
+NET "AN[3]" LOC = P22;	#Most left digit enable
+NET "AN[2]" LOC = P26;	# digit enable
+NET "AN[1]" LOC = P35;	# digit enable
+NET "AN[0]" LOC = P40; 	#Most right digit enable
+NET "SEG[7]" LOC = P16; #Segments A
+NET "SEG[6]" LOC = P17; #Segments B
+NET "SEG[5]" LOC = P20; #Segments C
+NET "SEG[4]" LOC = P21; #Segments D
+NET "SEG[3]" LOC = P31; #Segments E
+NET "SEG[2]" LOC = P32; #Segments F
+NET "SEG[1]" LOC = P33; #Segments G
+NET "SEG[0]" LOC = P34; #Segments Decimal Point

@@ -1,0 +1,29 @@
+Command line:
+   teszt_oszto_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1090
+
+Sun Mar 25 16:55:31 2018
+
+
+ Elaboration Time: 0.040057 sec
+
+ Current Memory Usage: 325.337 Meg
+
+ Total Signals          : 31
+ Total Nets             : 39
+ Total Signal Drivers   : 19
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 26
+ Total Traceable Variables  : 32
+ Total Scalar Nets and Variables : 302
+Total Line Count : 68
+
+ Total Simulation Time: 0.040057 sec
+
+ Current Memory Usage: 325.337 Meg
+
+Sun Mar 25 16:55:52 2018
+

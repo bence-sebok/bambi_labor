@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/teszt_szamologep_isim_beh.exe -prj C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/teszt_szamologep_beh.prj work.teszt_szamologep work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/test_top_modul_isim_beh.exe" -prj "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/test_top_modul_beh.prj" "work.test_top_modul" "work.glbl" 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
@@ -6,20 +6,20 @@ Determining compilation order of HDL files
 Analyzing Verilog file "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/oszto.v" into library work
 Analyzing Verilog file "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/hetszegmens.v" into library work
 Analyzing Verilog file "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/szamologep.v" into library work
-Analyzing Verilog file "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/teszt_szamologep.v" into library work
+Analyzing Verilog file "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/test_top_modul.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/test_top_modul.v" Line 15: Port AN is not connected to this instance
 Completed static elaboration
-Fuse Memory Usage: 77276 KB
-Fuse CPU Usage: 210 ms
-Compiling module oszto
+Fuse Memory Usage: 77280 KB
+Fuse CPU Usage: 180 ms
 Compiling module oszto(BITS=8)
 Compiling module hetszegmens
 Compiling module szamologep
-Compiling module teszt_szamologep
+Compiling module test_top_modul
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 6 Verilog Units
-Built simulation executable C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/teszt_szamologep_isim_beh.exe
-Fuse Memory Usage: 80736 KB
+Compiled 5 Verilog Units
+Built simulation executable C:/Documents and Settings/xilinxuser/Desktop/BAMBI1/test_top_modul_isim_beh.exe
+Fuse Memory Usage: 81764 KB
 Fuse CPU Usage: 220 ms

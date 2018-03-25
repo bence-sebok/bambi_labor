@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-XILINXVM::  Wed Mar 14 00:43:44 2018
+XILINXVM::  Sun Mar 25 20:01:34 2018
 
 par -w -intstyle ise -ol high -t 1 szamologep_map.ncd szamologep.ncd
 szamologep.pcf 
@@ -44,7 +44,7 @@ Design Summary Report:
 
    Number of BUFGMUXs                        1 out of 24      4%
    Number of MULT18X18SIOs                   1 out of 12      8%
-   Number of Slices                        111 out of 2448    4%
+   Number of Slices                        152 out of 2448    6%
       Number of SLICEMs                      0 out of 1224    0%
 
 
@@ -63,43 +63,40 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:7f144ff5) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:c9ada646) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:7f144ff5) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:c9ada646) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:7f144ff5) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:c9ada646) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:abd90038) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:e879f3f5) REAL time: 1 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:abd90038) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:e879f3f5) REAL time: 1 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:abd90038) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:e879f3f5) REAL time: 1 secs 
 
 Phase 7.8  Global Placement
-...................
-...
-......................
-..................
+.....................
 ......
-Phase 7.8  Global Placement (Checksum:c14c8cc2) REAL time: 4 secs 
+Phase 7.8  Global Placement (Checksum:1ad5a88d) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:c14c8cc2) REAL time: 4 secs 
+Phase 8.5  Local Placement Optimization (Checksum:1ad5a88d) REAL time: 3 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:66c79b2) REAL time: 4 secs 
+Phase 9.18  Placement Optimization (Checksum:c7d18b19) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:66c79b2) REAL time: 4 secs 
+Phase 10.5  Local Placement Optimization (Checksum:c7d18b19) REAL time: 3 secs 
 
-Total REAL time to Placer completion: 4 secs 
-Total CPU  time to Placer completion: 4 secs 
+Total REAL time to Placer completion: 3 secs 
+Total CPU  time to Placer completion: 3 secs 
 Writing design to file szamologep.ncd
 
 
@@ -107,23 +104,21 @@ Writing design to file szamologep.ncd
 Starting Router
 
 
-Phase  1  : 741 unrouted;      REAL time: 7 secs 
+Phase  1  : 1078 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 671 unrouted;      REAL time: 7 secs 
+Phase  2  : 975 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 156 unrouted;      REAL time: 7 secs 
+Phase  3  : 168 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 168 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  4  : 201 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
-
-Updating file: szamologep.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
-
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Updating file: szamologep.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
 
 Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
@@ -154,7 +149,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP |  BUFGMUX_X2Y1| No   |   56 |  0.045     |  0.114      |
+|           clk_BUFGP |  BUFGMUX_X2Y1| No   |   93 |  0.044     |  0.113      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -174,8 +169,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.656ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.930ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.199ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.931ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -194,7 +189,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 9 secs 
 Total CPU time to PAR completion: 9 secs 
 
-Peak Memory Usage:  170 MB
+Peak Memory Usage:  174 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
